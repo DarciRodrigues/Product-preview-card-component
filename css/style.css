@@ -1,0 +1,121 @@
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --font-family-1: "Fraunces", serif;
+  --font-family-2: "Montserrat", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--Cream);
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  min-width: 657px;
+  max-width: 700px;
+  height: 500px;
+}
+.card-text {
+  background-color: var(--White);
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding-left: 20px;
+}
+h1 {
+  width: 7em;
+  font-weight: bold;
+  font-family: var(--font-family-1);
+}
+.card-text h2 {
+  font-family: var(--font-family-2);
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--Dark-grayish-blue);
+}
+.card-text p {
+  width: 16em;
+  line-height: 27px;
+  color: var(--Dark-grayish-blue);
+  font-family: var(--font-family-2);
+}
+.card-imagem,
+.card-text {
+  width: 50%;
+  height: 100%;
+}
+.card-imagem {
+  border-radius: 10px 0 0 10px;
+  background: url("../images/image-product-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  transition-delay: all 0.9s;
+}
+.card-imagem:hover {
+  background-size: 110%;
+}
+.precos {
+  display: flex;
+
+  align-items: center;
+}
+.precos #preco-pricipal {
+  font-family: var(--font-family-1);
+  color: var(--Dark-cyan);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.precos #desconto {
+  padding-left: 4px;
+  font-family: var(--font-family-2);
+  text-decoration: line-through;
+  font-size: 16px;
+  color: var(--Dark-grayish-blue);
+}
+button {
+  border: none;
+  border-radius: 10px;
+  background: var(--Dark-cyan);
+  color: var(--White);
+  width: 90%;
+  height: 50px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--Dark-grayish-blue);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+button svg {
+  margin-right: 5px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width: 600px) {
+  .card {
+    flex-direction: column;
+  }
+  .card-imagem {
+    border-radius: 10px 10px 0 0;
+  }
+  .card-text {
+
+    border-radius: 0 0 10px 10px;
+  }
+}
