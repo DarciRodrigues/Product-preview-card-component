@@ -36,7 +36,7 @@ body {
   padding-left: 20px;
 }
 h1 {
-  width: 7em;
+  width: 9em;
   font-weight: bold;
   font-family: var(--font-family-1);
 }
@@ -57,19 +57,18 @@ h1 {
   width: 50%;
   height: 100%;
 }
-.card-imagem {
+.card-imagem img {
+  width: 100%;
+  height: 100%;
   border-radius: 10px 0 0 10px;
-  background: url("../images/image-product-desktop.jpg");
-  background-size: cover;
-  background-position: center;
+  filter: saturate(0);
   transition-delay: all 0.9s;
 }
-.card-imagem:hover {
-  background-size: 110%;
+.card-imagem img:hover {
+  filter: none;
 }
 .precos {
   display: flex;
-
   align-items: center;
 }
 .precos #preco-pricipal {
@@ -108,14 +107,10 @@ button svg {
   color: hsl(228, 45%, 44%);
 }
 @media screen and (max-width: 600px) {
-  .card {
-    flex-direction: column;
-  }
-  .card-imagem {
+  .card-imagem img {
     border-radius: 10px 10px 0 0;
   }
   .card-text {
-
     border-radius: 0 0 10px 10px;
   }
 }
